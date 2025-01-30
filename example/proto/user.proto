@@ -1,0 +1,12 @@
+syntax = "proto2";
+package user;
+message User {
+    optional string name = 1;
+    optional int32 id = 2;
+    optional string email = 3;
+}
+
+
+service UsersCtrl {
+    rpc PostUser (User) returns (User) {}
+}
